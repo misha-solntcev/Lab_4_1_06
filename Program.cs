@@ -21,11 +21,16 @@ namespace Lab_4_1_06
                 Console.Write(item + " ");
             Console.WriteLine();
 
-            for (int i = 0; i < arr.Length; i++)            
+            /*for (int i = 0; i < arr.Length; i++)            
                 if (arr[i] < 0)                
                     arr[i] = arr[i] * arr[i];            
             foreach (var item in arr)
+                Console.Write(item + " ");*/
+
+            var res = arr.Select(i => i < 0 ? i * i : i);
+            foreach (var item in res)            
                 Console.Write(item + " ");
+            
 
             Console.ReadKey();
         }
